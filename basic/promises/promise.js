@@ -31,7 +31,7 @@ const PromisePolyfill = function (executor) {
       const handleFulfilled = () => {
         try {
           if (typeof onFulfilled !== "function") {
-            rejectNext(value);
+            resolveNext(value);
             return;
           }
 
